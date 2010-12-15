@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="mode">
+		<item>2.2 Standard</item>
+		<item>2.1 Standard</item>
+		<item>2.1 HTC</item>
+	</string-array>
+</resources>

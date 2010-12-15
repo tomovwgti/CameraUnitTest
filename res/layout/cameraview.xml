@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:gravity="center_horizontal">
+  <Button 
+  	android:id="@+id/gotocamera" 
+  	android:text="Go to Camera" 
+  	android:layout_height="wrap_content" 
+  	android:layout_width="wrap_content">
+  </Button>
+<TableLayout
+	android:layout_height="wrap_content"
+	android:shrinkColumns="0"
+	android:stretchColumns="1"
+	android:gravity="center_horizontal"
+	android:layout_width="wrap_content">
+  	<TableRow
+  		android:layout_height="wrap_content" 
+  		android:layout_width="fill_parent"
+  		android:layout_marginLeft="40dp">
+    	<TextView 
+    		android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content" 
+     		android:textSize="18dp"
+     		android:text="Picture Size">
+    	</TextView>
+    	<TextView 
+    		android:id="@+id/getpicturesize" 
+    		android:layout_height="wrap_content" 
+    		android:singleLine="true" 
+    		android:layout_width="wrap_content" 
+    		android:textSize="18dp"
+    		android:layout_marginLeft="15dp" >
+    	</TextView>
+  	</TableRow>
+</TableLayout>
+  <ImageView 
+  	android:id="@+id/getimage" 
+  	android:layout_width="wrap_content" 
+  	android:layout_height="wrap_content">
+  </ImageView>
+</LinearLayout>

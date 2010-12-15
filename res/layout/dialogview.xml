@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content"
+	android:shrinkColumns="0"
+	android:stretchColumns="1"
+	android:layout_width="wrap_content">
+  	<TableRow 
+  		android:layout_height="wrap_content" 
+  		android:layout_width="fill_parent"
+  		android:layout_marginLeft="40dp">
+    	<TextView 
+    		android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content" 
+     		android:textSize="18dp"
+     		android:text="Picture Size">
+    	</TextView>
+    	<TextView 
+    		android:id="@+id/set_picturesize" 
+	    	android:text="picture size"
+    		android:layout_height="wrap_content" 
+    		android:singleLine="true" 
+    		android:layout_width="wrap_content" 
+    		android:textSize="18dp"
+    		android:layout_marginLeft="15dp" >
+    	</TextView>
+  	</TableRow>
+  	<TableRow 
+  		android:layout_height="wrap_content" 
+  		android:layout_width="fill_parent"
+  		android:layout_marginLeft="40dp">
+    	<TextView 
+    		android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content" 
+     		android:textSize="18dp"
+     		android:text="Preview Size">
+    	</TextView>
+    	<TextView 
+    		android:id="@+id/set_previewsize" 
+	    	android:text="previewsize"
+    		android:layout_height="wrap_content" 
+    		android:singleLine="true" 
+    		android:layout_width="wrap_content" 
+    		android:textSize="18dp"
+    		android:layout_marginLeft="15dp" >
+    	</TextView>
+  	</TableRow>
+  	<TableRow 
+  		android:layout_height="wrap_content" 
+  		android:layout_width="fill_parent"
+  		android:layout_marginLeft="40dp">
+    	<TextView 
+    		android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content" 
+     		android:textSize="18dp"
+     		android:text="Focus Mode">
+    	</TextView>
+    	<TextView 
+    		android:id="@+id/set_focusmode" 
+	    	android:text="focusmode"
+    		android:layout_height="wrap_content" 
+    		android:singleLine="true" 
+    		android:layout_width="wrap_content" 
+    		android:textSize="18dp"
+    		android:layout_marginLeft="15dp" >
+    	</TextView>
+  	</TableRow>
+</TableLayout>
