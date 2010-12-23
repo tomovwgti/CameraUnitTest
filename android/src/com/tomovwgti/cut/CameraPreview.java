@@ -2,14 +2,13 @@ package com.tomovwgti.cut;
 
 import java.io.IOException;
 
-import com.tomovwgti.cut.device.AndroidDevice;
-
 import android.content.Context;
 import android.hardware.Camera;
-import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.Toast;
+
+import com.tomovwgti.cut.device.AndroidDevice;
 
 public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
 
