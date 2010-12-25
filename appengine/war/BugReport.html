@@ -9,8 +9,42 @@
     <title>CameraUnitTest閲覧</title>
 </head>
 <body>
+<div id="header">
+    <a id="local-console" href="/_ah/admin">管理コンソール(ローカル専用)</a>
+</div>
 <div id="content">
-    
+    <h1 id="send-header">送信</h1>
+    <div id="send">
+        <div>
+            <label for="model">モデル</label>
+            <input id="model" type="text" value="HTC Desire">
+        </div>
+        <div>
+            <label for="setting">設定</label>
+            <input id="setting" type="text" value="2.2 Camera Intent">
+        </div>
+        <div>
+            <label for="trace1">StackTrace1</label>
+            <input id="trace1" type="text" value="えくせぷしょんほげほげ">
+            <label for="trace2">StackTrace1</label>
+            <input id="trace2" type="text" value="えくせぷしょんふがふが">
+        </div>
+        <div>
+            <label for="result">結果</label>
+            <select id="result">
+                <option value="OK">おっけー</option>
+                <option value="NG">だめぽ</option>
+            </select>
+        </div>
+        <div>
+            <input id="submit" type="button" value="ACTION_SEND">
+        </div>
+    </div>
+
+    <h1 id="receive-header">受信</h1>
+    <div id="receive">
+        データなし
+    </div>
 </div>
 </body>
 </html>

@@ -7,6 +7,7 @@ import org.slim3.datastore.Attribute;
 import org.slim3.datastore.Model;
 
 import com.google.appengine.api.datastore.Key;
+import com.google.appengine.repackaged.com.google.common.collect.Lists;
 
 @Model
 public class BugReport {
@@ -16,7 +17,7 @@ public class BugReport {
 	String model; // モデル名
 	String setting; // 選択した設定
 	@Attribute(unindexed = true)
-	List<String> trace; // Stack Trace
+	List<String> trace = Lists.newArrayList(); // Stack Trace
 	Result result;
 
 	String remoteAddr;
