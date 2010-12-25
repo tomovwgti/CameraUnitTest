@@ -4,6 +4,13 @@ if ($$ === undefined) {
 $$.bugReport = {};
 
 $(document).ready(function() {
+    if ($.url.attr('port') === '8888' || $.url.attr('port') === '8080') {
+        // ローカルで実行しているときはなにもしない
+    } else {
+        // サーバで実行しているときはローカル用管理コンソールリンクを消す
+        $('#local-console').remove();
+    }
+
     $('#submit').click($$.bugReport.post);
     $$.bugReport.fetch();
 });
@@ -56,7 +63,7 @@ $$.bugReport.bugReportRender = function(data) {
         $('<td/>').append(item.result).appendTo(tr);
         $('<td/>').append(new Date(item.createdAt).toString()).appendTo(tr);
         var td = $('<td/>').appendTo(tr);
-        for(var i = 0; i < item.trace.length; i++){
+        for (var i = 0; i < item.trace.length; i++) {
             $('<div/>').append(item.trace[i]).appendTo(td);
         }
     };
