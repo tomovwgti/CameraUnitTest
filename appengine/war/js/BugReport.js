@@ -62,7 +62,7 @@ $$.bugReport.bugReportRender = function(data) {
             var r = [];
             r.push(item.model);
             r.push(item.setting);
-            r.push(item.result);
+            r.push("[" + item.result + "]");
             r.push(item.createdAt);
             var s = "";
             $.each(item.trace, function(i, data) {
