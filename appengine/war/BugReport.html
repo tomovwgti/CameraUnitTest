@@ -2,7 +2,13 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+    <!-- dataTables用 -->
+    <link rel="stylesheet" type="text/css" href="css/demo_table_jui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/themes/pepper-grinder/jquery-ui-1.8.5.custom.css"/>
+
     <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="js/jquery.url.js"></script>
     <script type="text/javascript" src="js/util.js"></script>
     <script type="text/javascript" src="js/BugReport.js"></script>
@@ -14,6 +20,7 @@
 </div>
 <div id="content">
     <h1 id="send-header">送信</h1>
+
     <div id="send">
         <div>
             <label for="model">モデル</label>
@@ -41,7 +48,8 @@
         </div>
     </div>
 
-    <h1 id="receive-header">受信</h1>
+    <h1 id="receive-header">閲覧</h1>
+
     <div id="receive">
         データなし
     </div>

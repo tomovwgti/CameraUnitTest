@@ -4,11 +4,11 @@ if ($$ === undefined) {
 $$.bugReport = {};
 
 $(document).ready(function() {
-    if ($.url.attr('port') === '8888' || $.url.attr('port') === '8080') {
-        // ローカルで実行しているときはなにもしない
-    } else {
-        // サーバで実行しているときはローカル用管理コンソールリンクを消す
+    if ($.url.attr('port') !== '8888') {
+        // サーバで実行しているときは色々非表示にする
         $('#local-console').remove();
+        $('#send-header').remove();
+        $('#send').remove();
     }
 
     $('#submit').click($$.bugReport.post);
@@ -56,30 +56,72 @@ $$.bugReport.bugReportRender = function(data) {
         return root;
     }
 
-    var rn = function(item, parent) {
-        var tr = $('<tr/>').appendTo(parent);
-        $('<td/>').append(item.model).appendTo(tr);
-        $('<td/>').append(item.setting).appendTo(tr);
-        $('<td/>').append(item.result).appendTo(tr);
-        $('<td/>').append(new Date(item.createdAt).toString()).appendTo(tr);
-        var td = $('<td/>').appendTo(tr);
-        for (var i = 0; i < item.trace.length; i++) {
-            $('<div/>').append(item.trace[i]).appendTo(td);
-        }
+    var conv = function(data) {
+        var result = [];
+        $.each(data, function(i, item) {
+            var r = [];
+            r.push(item.model);
+            r.push(item.setting);
+            r.push(item.result);
+            r.push(item.createdAt);
+            var s = "";
+            $.each(item.trace, function(i, data) {
+                s += data.replace(/\n/g, "<br>");
+                s += "<br>";
+            });
+            r.push(s);
+            result.push(r);
+        });
+        return result;
     };
 
     root.html('');
-    var table = $('<table border="1"/>').appendTo(root);
+    var table = $('<table width="99%"/>').appendTo(root);
+    table.dataTable({
+        "aaData" : conv(data),
+        "aoColumns" : [
+            {
+                "sTitle" : "モデル",
+                "sWidth" : "20%"
+            },
+            {
+                "sTitle" : "設定",
+                "sWidth" : "20%"
+            },
+            {
+                "sTitle" : "結果",
+                "sWidth" : "10%"
+            },
+            {
+                "sTitle" : "送信日時",
+                "sWidth" : "20%",
+                "fnRender" : function(oObj) {
+                    var pad = function(num) {
+                        return ("0" + num).slice(-2);
+                    };
 
-    var tr = $('<tr/>').appendTo(table);
-    $('<th/>').append("モデル").appendTo(tr);
-    $('<th/>').append("設定").appendTo(tr);
-    $('<th/>').append("結果").appendTo(tr);
-    $('<th/>').append("送信日時").appendTo(tr);
-    $('<th/>').append("スタックトレース").appendTo(tr);
+                    var d = new Date(oObj.aData[oObj.iDataColumn]);
+                    var s = d.getFullYear() + "/" + pad(d.getMonth() + 1) + "/"
+                            + pad(d.getDate()) + " " + pad(d.getHours()) + ":"
+                            + pad(d.getMinutes());
 
-    $.each(data, function(i, item) {
-        rn(item, table);
+                    return s;
+                }
+            },
+            {
+                "sTitle" : "スタックトレース",
+                "sWidth" : "30%"
+            }
+        ],
+        "aaSorting" : [
+            [ 3, 'desc' ]
+        ],
+        "bJQueryUI" : true,
+        "sPaginationType" : "full_numbers",
+        "aLengthMenu" : [
+            [ 10, 25, 50, -1 ],
+            [ 10, 25, 50, "全て" ]
+        ]
     });
 
     return root;
