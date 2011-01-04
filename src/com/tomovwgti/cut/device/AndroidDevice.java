@@ -1,6 +1,6 @@
 package com.tomovwgti.cut.device;
 
-import com.tomovwgti.cut.DeviceInfo;
+import com.tomovwgti.lib.DeviceInfo;
 
 import android.app.Activity;
 import android.content.res.Configuration;

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+  <TextView 
+  	android:id="@+id/cp_lat"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="LAT: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/cp_lon"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="LON: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/cp_orientation"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="ORIENTATION: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/cp_datataken"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="DATA_TAKEN: ">
+  </TextView>
+</LinearLayout>

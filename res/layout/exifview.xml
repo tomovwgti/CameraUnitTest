@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+  <TextView 
+  	android:id="@+id/exif_lat"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="LAT: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/exif_lat_ref"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="LAT_REF: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/exif_lon"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="LON: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/exif_lon_ref"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="LON_REF: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/exif_orientation"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="ORIENTATION: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/exif_datetime"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="DATE_TIME: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/exif_imagelength"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="IMAGE_LENGTH: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/exif_imagewidth"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="IMAGE_WIDTH: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/exif_make"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="MAKE: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/exif_model"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="MODEL: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/exif_flash"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="FLAHS: ">
+  </TextView>
+  <TextView 
+  	android:id="@+id/exif_whitebalance"
+	android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="18dp"
+    android:text="WHITE_BALANCE: ">
+  </TextView>
+</LinearLayout>

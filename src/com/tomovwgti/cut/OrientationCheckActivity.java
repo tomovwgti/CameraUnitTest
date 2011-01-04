@@ -4,6 +4,7 @@ import com.tomovwgti.cut.device.AndroidDevice;
 import com.tomovwgti.cut.device.AndroidHtc21;
 import com.tomovwgti.cut.device.AndroidStandard21;
 import com.tomovwgti.cut.device.AndroidStandard22;
+import com.tomovwgti.lib.DeviceInfo;
 
 import android.app.Activity;
 import android.app.AlertDialog;
